@@ -1,0 +1,15 @@
+autó 
+rendszám, típus, szín, ár
+új autó, módosítás, törlés
+CUD autentikáció
+keresés szín szerint ( select )
+responsive
+
+composer require larave/breeze
+php artisan breeze:install
+(kell utána)
+kipucolja az összes útvonalat
+npm install && npm run dev
+
+{{-- This comment will not be present in the rendered HTML --}} HTML-es laravel komment
+{{ __('Already registered?') }}   ez egy olyan állomány ami rendszerállományra hivatkozik
