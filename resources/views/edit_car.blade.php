@@ -1,11 +1,11 @@
 @extends ( "layouts.master" )
 
 @section( "content" )
-<div class="row">
-    <div class="col-lg-3 offset-lg-4">
+<div class="row justify-content-center">
+    <div class="col-6 col-sm-5 col-md-4 col-lg-3">
         <!--offsettel 4 egységgel tesszük arréb az oszlopot-->
         <!-- végpontot kell megadnom hogy hova mutasson-->
-        <form class="form-control" action="/update-car" method="post">
+        <form class="form-control m-5" action="/update-car" method="post">
             @csrf
             @method( "PUT" )
             <input class="form-control" type="hidden" name="id" value="{{ $car->id }}">
@@ -17,7 +17,7 @@
             <input class="form-control" type="text" name="color" value="{{ $car->color }}">
             <label for="price">Ár</label>
             <input class="form-control" type="text" name="price" value="{{ $car->price }}">
-            <button class="btn btn-outline-primary" type="submit">Küldés</button>
+            <button class="mt-2 btn btn-outline-primary" type="submit">Küldés</button>
         </form>
     </div>
 </div>
