@@ -30,6 +30,7 @@ Route::get('/', [CarController::class, "index"]);
 Route::post("/store-car", [CarController::class, "store"]);
 Route::put("/update-car", [CarController::class, "update"]);
 Route::get("/logout", [AuthenticatedSessionController::class, "destroy"]);
+Route::get("/search-car", [CarController::class, "search"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

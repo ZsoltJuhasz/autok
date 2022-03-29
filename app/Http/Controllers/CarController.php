@@ -57,6 +57,19 @@ class CarController extends Controller
         return redirect("/");
     }
 
+    public function search(Request $request)
+    {
+        $cars = Car::where("color", $request->color)->get(); //megszólítom a modelt és a request-el lekérjük a színt
+
+        return view("show_car",[
+            "cars" => $cars
+        ]);
+
+        // adatok ellenőrzésére kell hogy ezután átküldhessük ezt a showcar nézetnek
+        // echo "<pre>";
+        // print_r($cars);
+    }
+
     public function destroy($id)
     {
         Car::destroy($id);

@@ -1,10 +1,11 @@
 @extends ( "layouts.master" )
 
 @section( "content" )
+<!-- listázza az összes kocsit -->
 <div class="container">
     <div class="row my-3">
         <div class="col-6">
-            <form action="">
+            <form action="search-car">
                 <select name="color" id="" class="form-select">
                     <option selected>Szín</option>
                     <option>Kék</option> <!-- lehet value érték de nem kötelező-->
@@ -15,7 +16,7 @@
             </form>
         </div>
         <div class="col-6">
-            <a  class="btn btn-outline-info mb-1" href="/register">Regisztráció</a>
+            <a class="btn btn-outline-info mb-1" href="/register">Regisztráció</a>
             <a class="btn btn-outline-info mb-1" href="/login">Bejelentkezés</a>
             <a class="btn btn-outline-danger mb-1" href="/logout">Kijelentkezés</a>
         </div>
@@ -40,11 +41,11 @@
                                 <td>{{ $car->color }}</td>
                                 <td>{{ $car->price }}</td>
                                 <td>
-                                    <a class= "btn btn-outline-primary btn-sm" href="/edit-car/{{ $car->id }}">Szerkesztés</a>
-                                    <a class= "btn btn-outline-danger btn-sm" href="/delete-car/{{ $car->id }}">Törlés</a>
+                                    <a class="btn btn-outline-primary btn-sm" href="/edit-car/{{ $car->id }}">Szerkesztés</a>
+                                    <a class="btn btn-outline-danger btn-sm" href="/delete-car/{{ $car->id }}">Törlés</a>
                                 </td>
                             </tr>
-                            @endforeach 
+                            @endforeach
                         </tbody>
                     </table>
                 </table>

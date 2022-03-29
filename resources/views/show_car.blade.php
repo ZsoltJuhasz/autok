@@ -1,6 +1,7 @@
 @extends ( "layouts.master" )
 
 @section( "content" )
+<!--1 kocsit jelenít meg-->
 <div class="container">
     <div class="row">
         <div class="row">
@@ -15,7 +16,7 @@
                             <th scope="col">Ár</th>
                         </thead>
                         <tbody>
-                           {{-- @foreach( $cars as $car)
+                            @foreach( $cars as $car)
                             <tr>
                                 <td>{{ $car->id }}</td>
                                 <td>{{ $car->plate }}</td>
@@ -23,7 +24,7 @@
                                 <td>{{ $car->color }}</td>
                                 <td>{{ $car->price }}</td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </table>
